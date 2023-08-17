@@ -1,13 +1,13 @@
 # iINSTRUCCIONES
 
-# ANGULAR
+# ANGULAR 
 ### INSTALAR LAS DEPENDENCIAS
 ### NPM I 
 ### CORRER EL SERVIDOR LOCAL EN EL PUERTO: 4200
 ### NG SERVE -O
 
 
-#   SPRING BOOT USING 'H2'
+#   SPRING BOOT(3.1.2) USING 'H2' 
 ##   INICIAR EL SERVIDOR BACKEND
 ### 1. CLICK DERECHO AL ARCHIVO ApiRestApplication.java RUN JAVA
 ###    en al ruta  src\main\java\com\bubble\apirest\ApiRestApplication.java
