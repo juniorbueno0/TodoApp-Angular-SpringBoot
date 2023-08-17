@@ -10,7 +10,7 @@
             <label for="exampleFormControlTextarea1" class="form-label">Todo Description</label>
             <textarea formControlName="description" class="form-control no-border flex-grow" id="exampleFormControlTextarea1" rows="3" placeholder="description...."></textarea>
         </div>
-        <Button (click)="onSubmitForm()" type="submit" class="rounded-full bg-gradient-to-tr from-indigo-400 via-indigo-400 to-pink-400 font-semibold drop-shadow-xl shadow-xl hover:text-white py-1">
+        <Button (click)="onSubmitForm()" routerLink="/list" type="submit" class="rounded-full bg-gradient-to-tr from-indigo-400 via-indigo-400 to-pink-400 font-semibold drop-shadow-xl shadow-xl hover:text-white py-1">
             {{buttonTitle}}
         </Button>
     </form>
