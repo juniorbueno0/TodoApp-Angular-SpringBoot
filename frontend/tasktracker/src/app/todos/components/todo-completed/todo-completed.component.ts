@@ -13,10 +13,10 @@ export class TodoCompletedComponent implements OnInit {
   constructor(private todoService: TodoService){}
   
   ngOnInit(): void {
-    this.setTodosCompleted();
+    this.todosListCompleted();
   }
 
-  setTodosCompleted(){
+  todosListCompleted(){
     this.todoService.getTodosCompleted().subscribe(todos => {
       this.activitiesCompleted = todos;
     })

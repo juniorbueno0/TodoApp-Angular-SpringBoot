@@ -28,7 +28,7 @@ public class TodoController {
 
     // post request 
     @PostMapping
-    public Todo createUser(@RequestBody Todo todo){
+    public Todo createTodo(@RequestBody Todo todo){
         return todoService.createTodo(todo);
     }
 
