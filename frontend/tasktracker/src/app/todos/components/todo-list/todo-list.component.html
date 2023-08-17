@@ -1,0 +1,36 @@
+<div class="card w-100 border-0">
+    <div class="ard-body d-flex flex-column h-100 w-100 text-center">
+        <h1 class="font-semibold text-lg">Todo List</h1>
+        <table class="table table-striped mt-4 flex-grow">
+            <thead>
+                <tr>
+                <th scope="col">TITLE</th>
+                <th scope="col">DESCRIPTION</th>
+                <th scope="col">STATUS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let activity of activityList">
+                    <td>{{activity.title}}</td>
+                    <td>{{activity.description}}</td>
+                    <td>Pending</td>
+
+                    <td scope="col" class="flex gap-2 justify-between">
+                        <button (click)="setToCompleted(activity)" class="bg-gradient-to-tr rounded-lg px-1 ml-20 from-indigo-400 via-indigo-400 to-pink-400 hover:text-white">
+                            Complete 
+                        </button> 
+
+                        <button class="mr-2"  [routerLink]="['/update', activity.id]">
+                            <i class="fa-solid fa-pen-to-square text-indigo-400 hover:text-indigo-500"></i>
+                        </button>
+
+                        <button class="ml-2" (click)="deleteTodo(activity)">
+                            <i class="fa-solid fa-trash text-red-400 hover:text-red-500"></i>
+                        </button>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

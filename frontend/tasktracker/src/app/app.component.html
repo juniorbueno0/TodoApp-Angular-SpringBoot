@@ -1,0 +1,28 @@
+<main
+  class="flex w-screen h-screen items-center justify-center bg-gradient-to-tr from-indigo-500 via-indigo-400 to-pink-500"
+>
+  <nav
+    class="bg-white text-black flex h-5/6 w-[160px] rounded-lg m-2 justify-center"
+  >
+    <shared-sidebar></shared-sidebar>
+  </nav>
+
+  <!-- <section class="flex w-[440px] sm:w-[440px] md:w-[660px] lg:w-[880px] xl:w-[1100px] h-full items-center">
+    <div class="flex w-full bg-white justify-center p-4 m-4 h-4/5 rounded-lg">
+      <router-outlet></router-outlet>
+    </div>
+  </section> -->
+
+
+  <section class="w-[440px] sm:w-[440px] md:w-[660px] lg:w-[880px] xl:w-[1100px] h-screen flex items-center justify-center">
+    <div class="w-full bg-white p-4 m-4 h-5/6 rounded-lg shadow">
+        <div class="card-body d-flex flex-column h-full overflow-auto">
+            <!-- table -->
+            <table class="table table-striped mt-4 flex-grow">
+                <router-outlet></router-outlet>
+            </table>
+            <!-- end table -->
+        </div>
+    </div>
+</section>
+</main>
