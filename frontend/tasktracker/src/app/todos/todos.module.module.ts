@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ToastrModule } from 'ngx-toastr';
 import { FormsModule } from '@angular/forms'
 
 // COMPONENTS
@@ -24,9 +23,7 @@ import { RouterModule } from '@angular/router';
     ReactiveFormsModule,
     RouterModule,
     CommonModule,
-    ToastrModule,
     FormsModule,
-    ToastrModule
   ],
   exports:[
     TodoListComponent,

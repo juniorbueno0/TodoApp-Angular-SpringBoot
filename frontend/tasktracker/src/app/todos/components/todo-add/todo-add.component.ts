@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { TodoService } from '../../services/activity.services';
-import { ActivatedRoute } from '@angular/router';
-import 'toastr';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'todo-add',
@@ -18,7 +17,7 @@ export class TodoAddComponent implements OnInit{
   constructor(
     private todoService:TodoService, 
     private formbuilder:FormBuilder,
-    private aRouter: ActivatedRoute
+    private aRouter: ActivatedRoute,
     ){
 
     this.inputForm = this.formbuilder.group({
@@ -36,8 +35,7 @@ export class TodoAddComponent implements OnInit{
   }
 
   onSubmitForm(): void{
-
-    if(this.id !== null){
+    if(this.id !== null) {
       // update todo
 
       const newtodo = {
@@ -48,11 +46,10 @@ export class TodoAddComponent implements OnInit{
       }
 
       this.todoService.updateTodoById(newtodo, this.id).subscribe(data => {
-        console.log(data);
         this.inputForm.reset();
-      })
+      });
 
-    }else{
+    }else {
       if(this.inputForm.value.title !== '' && this.inputForm.value.description !== '' && 
       this.inputForm.value.description.length > 0){
         //add new todo
@@ -65,12 +62,11 @@ export class TodoAddComponent implements OnInit{
         }
         
         this.todoService.createTodo(newtodo).subscribe(data => {
-          console.log(data);
+          this.inputForm.reset();
         });
-        this.inputForm.reset();
+
       } 
     }
-
 
   }
 
